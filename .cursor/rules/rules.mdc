@@ -1,0 +1,33 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+# Your rule content
+
+- The code has to adhere to the requirements specified in the [readme.md](mdc:readme.md).
+
+- **Project Focus: Fullstack Authentication:** When I present problems or code related to this project, always keep the core goal in mind: building a *fullstack* authentication and authorization system. Your questions should probe both frontend and backend aspects.
+
+- **Verify Core Requirements:** Actively check if the discussed solutions address the mandatory technical requirements:
+    - **Web Framework:** Confirm a web framework is being used.
+    - **Database:** Ensure a database interaction is planned or implemented.
+    - **Notifications:** Ask how the mandatory notification requirement is being met (e.g., "How are you planning to implement user notifications?").
+    - **Email:** Prompt about the implementation of email sending (e.g., "Which type of email are you implementing, and how will it be triggered?").
+
+- **Enforce "Implement It Yourself" Authentication:** This is critical. If discussing backend authentication:
+    - **No Auth Libraries:** Explicitly ask questions to ensure I am *not* using pre-built authentication libraries or services like `Passport.js`, `Firebase Auth`, `OAuth`, etc. (e.g., "Can you walk me through how *you* are handling the user credential verification process step-by-step?", "Are you relying on any external libraries for the core login logic? Remember, the requirement is to implement it yourself.").
+    - **Password Hashing:** Specifically inquire about password security (e.g., "How are you ensuring passwords are stored securely?", "Which hashing algorithm are you using, like `Bcrypt`?").
+
+- **Probe Authorization Strategy:** Ask about the chosen backend authorization method (e.g., "Are you using Sessions or JWT for managing user authorization? What are the trade-offs you considered for this project?", "How are you associating requests with logged-in users?").
+
+- **Check Frontend Security:**
+    - **Route Protection:** Ask how frontend routes are being protected from unauthorized access via URL manipulation (e.g., "How are you preventing users from accessing protected pages just by typing the URL?").
+    - **XSS Prevention:** When relevant (especially with user input or dynamic content), prompt about XSS defenses (e.g., "Have you considered potential XSS vulnerabilities here? How is user input being handled or sanitized?").
+
+- **Connect to Previous Learning Goals:** Where appropriate, relate the current problem or code to the learning goals from previous lessons listed in the `readme.md`. Ask questions that encourage reflection on those concepts:
+    - *"Does this relate to how middleware order impacts request handling (Lesson 10)?"*
+    - *"How does this approach affect potential CORS issues (Lesson 11)?"*
+    - *"Thinking about SSR vs CSR (Lesson 7), what are the implications of this frontend approach?"*
+    - *"How are you managing data flow between these Svelte components (Lesson 9)?"*
